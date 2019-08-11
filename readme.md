@@ -4,13 +4,13 @@
 
 ### 第一部分（C++基础）
 
-- 第一章：开始
-- 第二章：变量和数据类型
-- 第三章：字符串、向量和数组
+- 第一章：开始 【 [第一章](https://www.bilibili.com/video/av61616563/)】
+- 第二章：变量和数据类型 【[第二章第一节](https://www.bilibili.com/video/av61772099/)、[第二章第二节](https://www.bilibili.com/video/av61895809/)】
+- 第三章：字符串、向量和数组 【 [第三章](https://www.bilibili.com/video/av62203251/)】
 - 第四章：表达式
 - 第五章：语句
-- 第六章：函数
-- 第七章：类
+- 第六章：函数 【 [第六章第一节](https://www.bilibili.com/video/av62379136/)、[第六章第二节](https://www.bilibili.com/video/av62522425/)、[第六章第三节](https://www.bilibili.com/video/av62622279/)】
+- 第七章：类 【[第七章第一节](https://www.bilibili.com/video/av63208231/)】
 
 
 

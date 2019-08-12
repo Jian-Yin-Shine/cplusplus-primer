@@ -10,7 +10,7 @@
 - 第四章：表达式
 - 第五章：语句
 - 第六章：函数 【 [第六章第一节](https://www.bilibili.com/video/av62379136/)、[第六章第二节](https://www.bilibili.com/video/av62522425/)、[第六章第三节](https://www.bilibili.com/video/av62622279/)】
-- 第七章：类 【[第七章第一节](https://www.bilibili.com/video/av63208231/)】
+- 第七章：类 【[第七章第一节](https://www.bilibili.com/video/av63208231/)、[第七章第二节](https://www.bilibili.com/video/av63356852)】
 
 
 

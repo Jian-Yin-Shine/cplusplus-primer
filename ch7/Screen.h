@@ -8,6 +8,9 @@ using namespace std;
 
 class Screen {
 public:
+    friend class Window_mgr;
+
+
     // 类型成员：在类中定义某种类型的别名
     typedef string::size_type pos;
     Screen() = default;

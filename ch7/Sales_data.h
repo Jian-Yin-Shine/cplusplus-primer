@@ -68,10 +68,21 @@ public:
     Sales_data(const string &s, unsigned n, double p):
                 bookNo(s), units_sold(n), revenue(p*n) { }
     Sales_data(istream &);
+    
+    // 委托构造函数：一个委托构造函数将自己初始化过程，交给其他构造函数
+    // Sales_data(): Sales_data("", 0, 0) { }
 
     string isbn() const { return bookNo;}
     Sales_data& combine(const Sales_data&);
     double avg_price() const;
+    
+    // 隐式一步类型转换
+    // Sales_data item;
+    // string null_book = "9-999-999999-9";
+    // item.combine(null_book); // 这里有一步转换 string -> Sales_data
+    // item.combine(cin); // cin -> Sales_data, 这个转换执行接受一个 istream的Sales_data的构造函数。
+    // 不能是item.combine("9-999-99999-9"); 两步转换 字面值-> string -> Sales_data
+    // 抑制隐式转换 explicit
 
 private:
     string bookNo;

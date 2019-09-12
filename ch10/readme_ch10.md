@@ -30,5 +30,10 @@ find_if(item.beign(), item.end(), pred)
 
 
 
+第二讲
 
+- 插入迭代器
+- 输入，输出流迭代器
+- 反向迭代器
 
+inserters.cc, iostream_iter.cc, use-istream-iter.cc, reverse-iter.cc

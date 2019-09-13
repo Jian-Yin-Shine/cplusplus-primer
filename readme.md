@@ -20,7 +20,7 @@
 - 第九章：顺序容器
 - 第十章：泛型编程【[第十章第一节](https://www.bilibili.com/video/av67158385/)、[第十章第二节](https://www.bilibili.com/video/av67398703/)】
 - 第十一章：关联容器
-- 第十二章：动态内存
+- 第十二章：动态内存【[第十二章第一节](https://www.bilibili.com/video/av67583494)】
 
 
 

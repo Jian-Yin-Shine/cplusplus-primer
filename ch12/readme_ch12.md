@@ -23,7 +23,7 @@ int *tp = p.get();
 int tmp = *p; // 将变得未定义
 ```
 
-5. unique指针，release()方法，不销毁对象，不释放内存，只是不再绑定该对象，返回那个对象的指针。
+5. unique_ptr指针，release()方法，不销毁对象，不释放内存，只是不再绑定该对象，返回那个对象的指针。
 
    ```C++
    p2.release() // 错误，p2不会释放内存，而且丢失了指针
@@ -59,3 +59,25 @@ int tmp = *p; // 将变得未定义
 - Shared_ptr不能用[]，必须用get()拿到指针，访问数组。
 
 Foo.h & StrBlob.h & useBlob.cc & knew.cc & UP.cc && weak.cc
+
+
+
+第二讲
+
+- allocator 类
+
+```c++
+allocator<int> alloc;
+int *p = alloc.allocate(n);
+int *q = p;
+alloc.construct(p++, int(42));
+while(q!=p)
+  alloc.destroy(--p);
+alloc.dellocate(p, n)
+
+vector<int> vi = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+auto p = alloc.allocate(vi.size()*2);
+auto q = uninitialized_copy(vi.begin(), vi.end(), p);
+uninitialized_fill_n(q, vi.size(), 42);
+```
+

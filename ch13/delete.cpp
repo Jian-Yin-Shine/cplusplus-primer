@@ -1,0 +1,67 @@
+
+/*
+析构函数
+ */
+
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Sales_data {
+    
+    friend ostream& operator << (ostream &, const Sales_data &);
+public:
+    Sales_data() = default;
+    Sales_data(const string& str) : bookn(str) {}
+    
+    Sales_data(const Sales_data&);
+    Sales_data& operator= (const Sales_data& rhs);
+    ~Sales_data() { cout << "del " << bookn << endl;}
+    
+private:
+    string bookn;
+    int num = 1;
+};
+
+Sales_data::Sales_data(const Sales_data& org) : bookn(org.bookn), num(org.num) {
+    
+    cout << "拷贝构造 ";
+}
+
+Sales_data&
+Sales_data::operator=(const Sales_data& rhs) {
+    
+    cout << "拷贝赋值";
+    this->bookn = rhs.num;
+    this->num = rhs.num;
+    
+    return *this;
+}
+
+ostream& operator << (ostream & os, const Sales_data & rhs) {
+    os << rhs.bookn << ' ' << rhs.num;
+    return os;
+}
+
+
+int main()
+{
+    Sales_data a("Number1"); // 直接构造
+    cout << a << endl;
+    
+    Sales_data b;           // 默认构造
+    cout << b << endl;
+    
+    Sales_data c(a);  // 拷贝构造，注意《C++ Primer》第五版P441页有错误，并且网络上绝大部份的博客都是错的
+    cout << c << endl;
+    
+    Sales_data d = a; // 拷贝构造
+    cout << d << endl;
+    
+    d = b;
+    cout << d << endl;
+    
+    return 0;
+}

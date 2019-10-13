@@ -20,3 +20,7 @@
 - 行为像值的类(string) hasptr1.cpp
 - 行为像指针的类(shared_ptr) hasptr2.cpp
 - 行为像值的类的交换操作与防卫式赋值 hasptr1_swap.cpp
+
+第四讲
+
+- 动态内存管理类，vector简化版（allocator管理内存）

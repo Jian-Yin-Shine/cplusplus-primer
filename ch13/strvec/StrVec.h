@@ -25,8 +25,10 @@ public:
 
     StrVec(const string* b, const string * e);
 
-
+    // const 成员函数，与非const成员函数同时存在时
+    // const 对象，调用const版本，非const对象调用非const版本
     string& operator[](size_t n) { return elements[n]; }
+    const string& operator[](size_t n) const { return elements[n]; }
 
     void push_back(const string&);
     size_t size() const { return first_free-elements; }

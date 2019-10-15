@@ -36,5 +36,11 @@ int main() {
     cout << e.size() << endl;
 
 
+    // 移动构造与赋值
+    StrVec f(std::move(e));
+    e = f;
+
+    e = std::move(f);
+
     return 0;
 }

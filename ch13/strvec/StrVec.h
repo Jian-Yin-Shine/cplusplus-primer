@@ -8,12 +8,15 @@
 #include <memory>
 #include <string>
 #include <utility>  // 使用string 的移动构造函数
+#include <iostream>
 
 
 using std::allocator;
 using std::uninitialized_copy; // (b, e, b2) 从迭代器b, e所指范围内拷贝到b2制定的原始内存中，
                             // 返回递增后的目的位置迭代器
 using std::string;
+
+using std::cin; using std::cout; using std::endl;
 
 class StrVec {
 
@@ -24,6 +27,24 @@ public:
     StrVec& operator=(const StrVec& rhs);
 
     StrVec(const string* b, const string * e);
+
+    StrVec(StrVec&& rhs) noexcept : elements(rhs.elements), first_free(rhs.first_free), cap(rhs.cap) {
+        rhs.elements = rhs.first_free = rhs.cap = nullptr;
+        cout << "移动构造 ";
+    }
+    StrVec& operator=(StrVec&& rhs) {
+        cout << "移动赋值 ";
+        if(this != &rhs) {
+            free();
+            elements = rhs.elements;
+            first_free = rhs.first_free;
+            cap = rhs.cap;
+            rhs.elements = rhs.first_free = rhs.cap = nullptr;
+        }
+        return *this;
+    }
+
+
 
     // const 成员函数，与非const成员函数同时存在时
     // const 对象，调用const版本，非const对象调用非const版本

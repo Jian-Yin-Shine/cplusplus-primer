@@ -28,7 +28,7 @@
 
 - 第十三章：拷贝函数 【[第十三章第一节](https://www.bilibili.com/video/av70685483)、[第十三章第二节](https://www.bilibili.com/video/av70715859)、[第十三章第三节](https://www.bilibili.com/video/av70763286)、[第十三章第四节](https://www.bilibili.com/video/av71145736)、[第十三章第五节](https://www.bilibili.com/video/av71290099)】
 - 第十四章：重载运算与类型转换
-- 第十五章：面对对象设计【[第十五章第一节](https://www.bilibili.com/video/av75490876)】
+- 第十五章：面对对象设计【[第十五章第一节](https://www.bilibili.com/video/av75490876)、[第十五章第二节](https://www.bilibili.com/video/av76086176)】
 - 第十六章：模板与泛型编程
 
 
